@@ -193,65 +193,48 @@ const Home: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white/90"></div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Trust logos bottom strip matching image reference */}
-          <div className="mt-28 flex flex-col items-center animate-fade-in-up animation-delay-300">
-            <p className="text-[13px] font-bold text-gray-800 mb-8 mx-auto text-center tracking-widest uppercase">Trusted by 4,000+ Students & Professionals from</p>
-            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-90 md:opacity-100 transition-all duration-500">
+      {/* Trust logos bottom strip matching image reference */}
+      <div className="max-w-7xl mx-auto px-4 mt-16 mb-12 flex flex-col items-center animate-fade-in-up animation-delay-300">
+        <p className="text-[13px] font-bold text-gray-800 mb-8 mx-auto text-center tracking-widest uppercase">Trusted by 4,000+ Students & Professionals from</p>
+        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-90 md:opacity-100 transition-all duration-500">
 
-              <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
-                <div className="w-8 h-8 rounded flex items-center justify-center bg-blue-900 text-white font-serif text-sm">UI</div>
-                Univ. of Ibadan
-              </div>
-
-              <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
-                <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center text-white font-serif text-xs">UNILAG</div>
-                UNILAG
-              </div>
-
-              <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
-                <div className="w-8 h-8 rounded bg-cyan-600 flex items-center justify-center text-white">
-                  <Cpu size={18} />
-                </div>
-                Sirius Tech Labs
-              </div>
-
-              <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
-                <div className="w-8 h-8 rounded bg-pink-500 flex items-center justify-center text-white">
-                  <Gem size={18} />
-                </div>
-                Diamond District
-              </div>
-
-              <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
-                <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center text-white">
-                  <Wind size={18} />
-                </div>
-                Wings.com
-              </div>
-
-            </div>
+          <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
+            <div className="w-8 h-8 rounded flex items-center justify-center bg-blue-900 text-white font-serif text-sm">UI</div>
+            Univ. of Ibadan
           </div>
-        </div>
-      </section>
 
-      {/* Modern Category Grid */}
-      < section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:-mt-24 relative z-20" >
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
-          {categories.map((cat, i) => (
-            <Link
-              key={i}
-              to={`/shop?category=${cat.cat}`}
-              className="bg-white p-4 md:p-6 rounded-[1.5rem] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all border border-gray-100/50 flex flex-col items-center justify-center text-center group"
-            >
-              <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-brand-primary mb-3 group-hover:bg-brand-primary group-hover:text-white transition-colors shadow-inner">
-                <Search size={20} />
-              </div>
-              <span className="text-xs md:text-sm font-black text-gray-800 leading-tight group-hover:text-brand-primary transition-colors">{cat.title}</span>
-            </Link>
-          ))}
+          <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
+            <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center text-white font-serif text-xs">UNILAG</div>
+            UNILAG
+          </div>
+
+          <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
+            <div className="w-8 h-8 rounded bg-cyan-600 flex items-center justify-center text-white">
+              <Cpu size={18} />
+            </div>
+            Sirius Tech Labs
+          </div>
+
+          <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
+            <div className="w-8 h-8 rounded bg-pink-500 flex items-center justify-center text-white">
+              <Gem size={18} />
+            </div>
+            Diamond District
+          </div>
+
+          <div className="flex items-center gap-2 text-gray-900 font-bold text-xl tracking-tighter">
+            <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center text-white">
+              <Wind size={18} />
+            </div>
+            Wings.com
+          </div>
+
         </div>
-      </section>
+      </div>
+
 
       {/* Flash Sales Style Section */}
       <section className="max-w-7xl mx-auto px-4 mb-20">
