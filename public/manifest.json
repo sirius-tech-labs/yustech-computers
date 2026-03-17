@@ -1,0 +1,21 @@
+{
+    "name": "Yustech Logic System Service",
+    "short_name": "Yustech",
+    "description": "Premium UK-used and new laptops in Nigeria. Tested, affordable, delivered nationwide.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f68b1e",
+    "icons": [
+        {
+            "src": "/logo.jpg",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo.jpg",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
