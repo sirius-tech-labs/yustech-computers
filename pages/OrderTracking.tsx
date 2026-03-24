@@ -33,7 +33,7 @@ const OrderTracking: React.FC = () => {
     // Load recent orders from localStorage on mount
     useEffect(() => {
         try {
-            const orders: OrderData[] = JSON.parse(localStorage.getItem('wonderful_orders') || '[]');
+            const orders: OrderData[] = JSON.parse(localStorage.getItem('yustech_orders') || '[]');
             setRecentOrders(orders.slice(0, 5)); // Show last 5 orders
         } catch {
             setRecentOrders([]);
@@ -67,7 +67,7 @@ const OrderTracking: React.FC = () => {
 
         // 2. Fallback to localStorage
         try {
-            const orders: OrderData[] = JSON.parse(localStorage.getItem('wonderful_orders') || '[]');
+            const orders: OrderData[] = JSON.parse(localStorage.getItem('yustech_orders') || '[]');
             const found = orders.find(o => o.id.toLowerCase() === idToSearch.toLowerCase());
             setFoundOrder(found || null);
         } catch {
