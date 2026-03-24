@@ -2,35 +2,30 @@
 import { createClient } from '@supabase/supabase-js';
 
 const getValidUrl = (url: string | undefined): string => {
+  const envUrl = url || import.meta.env.VITE_SUPABASE_URL;
+
   // Handle missing or clearly invalid values
-  if (!url || typeof url !== 'string' || url.trim() === '' || url === 'undefined' || url === 'null') {
-    return 'https://placeholder.supabase.co';
+  if (!envUrl || typeof envUrl !== 'string' || envUrl.trim() === '' || envUrl === 'undefined' || envUrl === 'null') {
+    console.error('CRITICAL: Supabase URL is missing or invalid. Check your .env file.');
+    return ''; // Return empty string so createClient fails fast with a clear error
   }
-  
+
   // Clean up the URL (remove quotes, whitespace)
-  let cleaned = url.trim().replace(/['"]/g, '');
-  
+  let cleaned = envUrl.trim().replace(/['"]/g, '');
+
   // Ensure protocol
   if (!cleaned.startsWith('http://') && !cleaned.startsWith('https://')) {
     cleaned = `https://${cleaned}`;
   }
-  
-  // Final validation attempt
-  try {
-    new URL(cleaned);
-    return cleaned;
-  } catch (e) {
-    console.error('Invalid Supabase URL provided:', cleaned);
-    return 'https://placeholder.supabase.co';
-  }
+
+  return cleaned;
 };
 
 const supabaseUrl = getValidUrl(import.meta.env.VITE_SUPABASE_URL);
-const supabaseAnonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key').trim().replace(/['"]/g, '');
+const supabaseAnonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY || '').trim().replace(/['"]/g, '');
 
-if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY || 
-    import.meta.env.VITE_SUPABASE_URL === 'undefined' || import.meta.env.VITE_SUPABASE_ANON_KEY === 'undefined') {
-  console.warn('Supabase URL or Anon Key is missing or invalid. Please check your environment variables in AI Studio.');
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error('Supabase configuration is incomplete. Authentication will not work.');
 }
 
 export const supabase = createClient(

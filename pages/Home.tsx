@@ -109,8 +109,8 @@ const Home: React.FC = () => {
   return (
     <div className="bg-[#f1f1f2] md:pb-20 overflow-x-hidden">
       <Helmet>
-        <title>Yustech Logic System Service | Premium Tech Store Nigeria</title>
-        <meta name="description" content="Buy affordable, high-quality UK-used and new laptops at Yustech Logic System Service. Nationwide delivery, tested hardware, and trusted service." />
+        <title>Yustech Logic System | Premium Tech Store Nigeria</title>
+        <meta name="description" content="Buy affordable, high-quality UK-used and new laptops at Yustech Logic System. Nationwide delivery, tested hardware, and trusted service." />
       </Helmet>
 
       {/* SaaS/Education Style Bright Hero Section */}

@@ -6,6 +6,8 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { WHATSAPP_NUMBER } from '../constants';
 
+import Logo from './Logo';
+
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -58,11 +60,8 @@ const Header: React.FC = () => {
           {/* Top Tier: Logo, Search, Actions */}
           <div className="flex justify-between items-center h-20 gap-4 md:gap-8">
             {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0 group gap-3">
-              <div className="flex flex-col -space-y-1">
-                <span className="text-xl font-black text-gray-900 tracking-tighter uppercase leading-none">Yustech Logic</span>
-                <span className="text-[11px] font-black text-brand-primary tracking-widest uppercase leading-none">System Services</span>
-              </div>
+            <Link to="/" className="flex items-center flex-shrink-0 group">
+              <Logo />
             </Link>
 
             {/* Global Search Bar (Desktop) */}

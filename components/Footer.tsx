@@ -3,15 +3,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Truck, Settings } from 'lucide-react';
 
+import Logo from './Logo';
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-950 text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div>
-          <div className="flex flex-col -space-y-1 mb-6">
-            <span className="text-xl font-black text-white tracking-tighter uppercase leading-none">Yustech Logic</span>
-            <span className="text-[11px] font-black text-brand-primary tracking-widest uppercase leading-none">System Services</span>
-          </div>
+          <Logo variant="white" className="mb-6" />
           <p className="text-gray-400 text-sm leading-relaxed mb-6 font-medium">
             Premium Nigerian retailer specializing in high-quality tech solutions, laptop repairs, and digital services. We prioritize reliability, trust, and exceptional nationwide delivery.
           </p>
@@ -70,7 +69,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs font-medium">
-        <p>&copy; {new Date().getFullYear()} Yustech Logic System Service. Trusted Retailer. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Yustech Logic System. Trusted Retailer. All Rights Reserved.</p>
       </div>
     </footer>
   );

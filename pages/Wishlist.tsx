@@ -11,8 +11,8 @@ const Wishlist: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 min-h-[60vh]">
       <Helmet>
-        <title>My Wishlist | Yustech Logic System Service</title>
-        <meta name="description" content="View and manage your favorite laptops at Yustech Logic System Service." />
+        <title>My Wishlist | Yustech Logic System</title>
+        <meta name="description" content="View and manage your favorite laptops at Yustech Logic System." />
       </Helmet>
 
       <div className="flex items-center gap-2 mb-8">

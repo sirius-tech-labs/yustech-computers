@@ -266,7 +266,7 @@ export const LAPTOPS: Laptop[] = [
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: '1', name: 'Tunde Adebayo', location: 'Lagos', text: 'Yustech Logic System Service delivered my HP EliteBook within 24 hours. The condition was exactly as described. Clean UK-used machine!', rating: 5 },
+  { id: '1', name: 'Tunde Adebayo', location: 'Lagos', text: 'Yustech Logic System delivered my HP EliteBook within 24 hours. The condition was exactly as described. Clean UK-used machine!', rating: 5 },
   { id: '2', name: 'Chioma Okeke', location: 'Abuja', text: 'Bought a ThinkPad for my coding bootcamp. Reliable service and the price was the best I found in Nigeria. No issues.', rating: 5 },
   { id: '3', name: 'Musa Ibrahim', location: 'Port Harcourt', text: 'Was worried about delivery but the packaging was very secure. Laptop arrived in perfect state. Highly trust Yustech.', rating: 5 },
   { id: '4', name: 'Adaeze Nwankwo', location: 'Enugu', text: 'I ordered the Dell Latitude 7490 for my office work. The 16GB RAM handles everything I throw at it. Battery still lasts 4+ hours. Amazing value!', rating: 5 },

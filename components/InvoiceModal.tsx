@@ -25,7 +25,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
   const [isDownloading, setIsDownloading] = useState(false);
 
   const openWhatsApp = () => {
-    let message = `*NEW ORDER FROM YUSTECH LOGIC SYSTEM SERVICE*%0A%0A`;
+    let message = `*NEW ORDER FROM YUSTECH LOGIC SYSTEM*%0A%0A`;
     message += `*Order ID:* ${order.id}%0A`;
     message += `*Name:* ${order.customerName}%0A`;
     message += `*Total:* ${formatPrice(order.totalAmount)}%0A%0A`;
@@ -137,7 +137,10 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
             <div className="flex flex-col md:flex-row justify-between items-start border-b-8 border-brand-primary pb-10 mb-12 gap-6">
               <div>
                 <div className="flex items-center mb-6">
-                  <img src="/logo.png" alt="Yustech Logic System Service" className="h-20 w-auto object-contain" />
+                  <div className="flex flex-col -space-y-1 items-start">
+                    <span className="text-3xl font-black text-gray-900 tracking-tighter uppercase leading-none">Yustech Logic</span>
+                    <span className="text-sm font-black text-brand-primary tracking-widest uppercase leading-none mt-1">System Services</span>
+                  </div>
                 </div>
                 <div className="space-y-1">
                   <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Global Solutions Provider</p>
@@ -239,7 +242,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
                 <div className="text-right flex-grow">
                   <p className="text-sm font-black text-gray-900 mb-2 italic">Building Trust, For Over a Decade.</p>
                   <p className="text-[10px] text-gray-400 font-bold leading-relaxed max-w-sm ml-auto">
-                    Yustech Logic System Service. Computer Village, Lagos. <br />
+                    Yustech Logic System. Computer Village, Lagos. <br />
                     Orders are processed within 24-48 hours. WhatsApp Support: +234 802 651 2829.
                   </p>
                 </div>

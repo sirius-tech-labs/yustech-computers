@@ -43,7 +43,7 @@ const Cart: React.FC = () => {
   };
 
   const generateWhatsAppMessage = () => {
-    let message = `*NEW ORDER FROM YUSTECH LOGIC SYSTEM SERVICE*%0A%0A`;
+    let message = `*NEW ORDER FROM YUSTECH LOGIC SYSTEM*%0A%0A`;
     message += `*--- CUSTOMER INFO ---*%0A`;
     message += `*Name:* ${formData.name}%0A`;
     message += `*Address:* ${formData.fullAddress}%0A`;
@@ -105,6 +105,31 @@ const Cart: React.FC = () => {
     // 3. Attempt to save to Supabase in the background (don't block the redirect)
     (async () => {
       try {
+        let idImageUrl = newOrder.idImage;
+
+        // If it's a base64 image and we have Supabase, try uploading it to storage
+        if (idImageUrl && idImageUrl.startsWith('data:image')) {
+          try {
+            const blob = await (await fetch(idImageUrl)).blob();
+            const fileExt = blob.type.split('/')[1] || 'jpg';
+            const fileName = `${newOrder.id}.${fileExt}`;
+            const filePath = `${fileName}`;
+
+            const { error: uploadError } = await supabase.storage
+              .from('order-ids')
+              .upload(filePath, blob);
+
+            if (!uploadError) {
+              const { data } = supabase.storage
+                .from('order-ids')
+                .getPublicUrl(filePath);
+              idImageUrl = data.publicUrl;
+            }
+          } catch (uploadErr) {
+            console.error('Failed to upload ID image, using base64 as fallback:', uploadErr);
+          }
+        }
+
         const { error } = await supabase.from('orders').insert([{
           id: newOrder.id,
           customerName: newOrder.customerName,
@@ -114,7 +139,7 @@ const Cart: React.FC = () => {
           items: newOrder.items,
           totalAmount: newOrder.totalAmount,
           paymentMethod: newOrder.paymentMethod,
-          idImage: newOrder.idImage,
+          idImage: idImageUrl,
           status: newOrder.status,
           createdAt: newOrder.createdAt
         }]);

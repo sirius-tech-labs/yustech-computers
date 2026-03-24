@@ -103,7 +103,7 @@ const OrderTracking: React.FC = () => {
     return (
         <div className="max-w-3xl mx-auto px-4 py-12 min-h-[70vh]">
             <Helmet>
-                <title>Track Your Order | Yustech Logic System Service</title>
+                <title>Track Your Order | Yustech Logic System</title>
                 <meta name="description" content="Track your laptop order status in real-time at Yustech. See if your order has been placed, is being processed, shipped, or delivered." />
             </Helmet>
 

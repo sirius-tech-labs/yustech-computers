@@ -147,7 +147,7 @@ const Finder: React.FC = () => {
               <h2 className="text-lg font-black tracking-tight">Smart Laptop Finder</h2>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <p className="text-gray-300 font-bold">Yustech Logic System Service | Lagos, Nigeria</p>
+                <p className="text-gray-300 font-bold">Yustech Logic System | Lagos, Nigeria</p>
               </div>
             </div>
           </div>

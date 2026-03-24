@@ -50,7 +50,7 @@ const Shop: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <Helmet>
-        <title>Shop | Yustech Logic System Service Catalog</title>
+        <title>Shop | Yustech Logic System Catalog</title>
         <meta name="description" content="Browse our wide range of UK-used and new laptops at Yustech. Filter by category: Student, Business, Gaming, and more. Best prices in Nigeria." />
       </Helmet>
       {/* Header and Controls */}
@@ -99,8 +99,8 @@ const Shop: React.FC = () => {
               key={cat}
               onClick={() => setActiveCategory(cat as any)}
               className={`whitespace-nowrap px-5 py-2.5 rounded-xl text-sm font-black transition-all border-2 flex-shrink-0 ${activeCategory === cat
-                  ? 'bg-brand-primary border-brand-primary text-white shadow-md shadow-brand-primary/20 scale-105'
-                  : 'bg-white border-gray-100 text-gray-600 hover:border-brand-primary/30 hover:bg-emerald-50'
+                ? 'bg-brand-primary border-brand-primary text-white shadow-md shadow-brand-primary/20 scale-105'
+                : 'bg-white border-gray-100 text-gray-600 hover:border-brand-primary/30 hover:bg-emerald-50'
                 }`}
             >
               {cat}

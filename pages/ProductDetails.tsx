@@ -89,9 +89,9 @@ const ProductDetails: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pb-20">
       <Helmet>
-        <title>{laptop.name} | Yustech Logic System Service Nigeria</title>
+        <title>{laptop.name} | Yustech Logic System Nigeria</title>
         <meta name="description" content={`${laptop.name} - ${laptop.specs}. ${laptop.description?.substring(0, 150)}...`} />
-        <meta property="og:title" content={`${laptop.name} | Yustech Logic System Service`} />
+        <meta property="og:title" content={`${laptop.name} | Yustech Logic System`} />
         <meta property="og:image" content={laptop.image} />
       </Helmet>
       {/* Breadcrumb & Back */}

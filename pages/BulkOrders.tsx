@@ -14,7 +14,7 @@ const BulkOrders: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
         <div>
-          <h2 className="text-3xl font-black text-gray-900 mb-12 text-center italic">Why Choose Yustech Logic System Service for Bulk Supply?</h2>
+          <h2 className="text-3xl font-black text-gray-900 mb-12 text-center italic">Why Choose Yustech Logic System for Bulk Supply?</h2>
           <div className="space-y-6">
             <div className="flex gap-4">
               <div className="bg-emerald-100 p-3 rounded-2xl text-brand-dark h-fit"><Building2 size={24} /></div>

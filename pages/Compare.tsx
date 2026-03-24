@@ -40,7 +40,7 @@ const Compare: React.FC = () => {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12 min-h-[70vh]">
             <Helmet>
-                <title>Compare Laptops | Yustech Logic System Service</title>
+                <title>Compare Laptops | Yustech Logic System</title>
                 <meta name="description" content="Compare laptop specs, prices, and features side-by-side. Find the best laptop for your needs." />
             </Helmet>
 
