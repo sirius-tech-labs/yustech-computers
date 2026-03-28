@@ -25,6 +25,7 @@ const Login = lazy(() => import('./pages/Login'));
 const UserOrders = lazy(() => import('./pages/UserOrders'));
 const OrderTracking = lazy(() => import('./pages/OrderTracking'));
 const Compare = lazy(() => import('./pages/Compare'));
+const Blog = lazy(() => import('./pages/Blog'));
 
 // Loading fallback
 const PageLoader = () => (
@@ -62,6 +63,7 @@ const AppContent: React.FC = () => {
                 <Route path="/orders" element={<UserOrders />} />
                 <Route path="/track" element={<OrderTracking />} />
                 <Route path="/compare" element={<Compare />} />
+                <Route path="/blog" element={<Blog />} />
                 <Route path="/login" element={<Login />} />
                 <Route
                   path="/admin"

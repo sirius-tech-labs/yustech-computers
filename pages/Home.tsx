@@ -2,8 +2,8 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, ChevronRight, ChevronLeft, CheckCircle2, Star, ShieldCheck, MapPin, Zap, Verified, Truck, MessageCircle, Cpu, Gem, Wind } from 'lucide-react';
-import { LAPTOPS, TESTIMONIALS, formatPrice } from '../constants';
+import { Search, ChevronRight, ChevronLeft, CheckCircle2, Star, ShieldCheck, MapPin, Zap, Verified, Truck, MessageCircle, Cpu, Gem, Wind, Package, Quote } from 'lucide-react';
+import { LAPTOPS, TESTIMONIALS, formatPrice, HAPPY_TECHIES } from '../constants';
 import { Category } from '../types';
 import ProductCard from '../components/ProductCard';
 import { useCart } from '../context/CartContext';
@@ -339,6 +339,76 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section >
+
+        {/* Happy Techies Customer Gallery */}
+        <section className="max-w-7xl mx-auto px-4 mb-16 md:mb-24">
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest mb-4 border border-green-100">
+              <Package size={14} /> Real Deliveries
+            </div>
+            <h2 className="text-2xl md:text-4xl font-black tracking-tight uppercase italic mb-3">Happy Techies Across Nigeria</h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-sm md:text-base font-medium">Real customers, real feedback. Join thousands of satisfied professionals and students.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {HAPPY_TECHIES.map((techie, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+              >
+                {/* Decorative emoji background */}
+                <div className="absolute top-4 right-4 text-4xl md:text-5xl opacity-10 group-hover:opacity-20 transition-opacity select-none">
+                  {techie.emoji}
+                </div>
+
+                <div className="relative z-10">
+                  {/* Quote */}
+                  <div className="mb-5">
+                    <Quote size={20} className="text-brand-primary/30 mb-2" />
+                    <p className="text-gray-700 font-bold text-sm md:text-base leading-relaxed italic">
+                      "{techie.quote}"
+                    </p>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="h-px bg-gray-100 mb-5" />
+
+                  {/* Customer Info */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-primary to-emerald-600 flex items-center justify-center text-white font-black text-sm shadow-md">
+                        {techie.name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="font-black text-gray-900 text-sm">{techie.name}</p>
+                        <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{techie.city}, Nigeria</p>
+                      </div>
+                    </div>
+                    <div className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[9px] md:text-[10px] font-black flex items-center gap-1 border border-emerald-100">
+                      <Verified size={10} /> Verified
+                    </div>
+                  </div>
+
+                  {/* Laptop purchased */}
+                  <div className="mt-4 bg-gray-50 rounded-xl px-4 py-2.5 flex items-center gap-2">
+                    <span className="text-lg">{techie.emoji}</span>
+                    <span className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-wider">Bought: {techie.laptop}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-10 md:mt-14">
+            <Link
+              to="/shop"
+              className="inline-flex items-center gap-3 bg-brand-primary text-white px-8 py-4 rounded-2xl font-black text-sm hover:bg-brand-dark transition-colors shadow-xl shadow-brand-primary/20 uppercase tracking-widest"
+            >
+              Join 4,000+ Happy Techies <ChevronRight size={18} />
+            </Link>
+          </div>
+        </section>
 
         {/* Reviews */}
         < section className="max-w-7xl mx-auto px-4" >

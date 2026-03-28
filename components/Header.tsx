@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, Menu, X, Truck, Bot, Search, Heart, LogIn, LogOut, Settings, ChevronDown, Package, Scale } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Menu, X, Truck, Bot, Search, Heart, LogIn, LogOut, Settings, ChevronDown, Package, Scale, BookOpen } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { WHATSAPP_NUMBER } from '../constants';
@@ -188,6 +188,9 @@ const Header: React.FC = () => {
               <Link to="/compare" className="flex items-center gap-1.5 text-gray-600 hover:text-brand-primary font-bold text-sm tracking-wide transition-colors">
                 <Scale size={16} /> Compare
               </Link>
+              <Link to="/blog" className="flex items-center gap-1.5 text-gray-600 hover:text-brand-primary font-bold text-sm tracking-wide transition-colors">
+                <BookOpen size={16} /> Guides
+              </Link>
             </div>
           </div>
         </div>
@@ -217,6 +220,7 @@ const Header: React.FC = () => {
             <Link to="/track" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Track Order</Link>
             <Link to="/wishlist" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Wishlist</Link>
             <Link to="/student-deals" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Students</Link>
+            <Link to="/blog" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Guides</Link>
           </div>
 
           <Link to="/finder" onClick={toggleMenu} className="flex items-center justify-center gap-3 w-full bg-emerald-50 text-brand-primary py-4 rounded-2xl font-black border border-emerald-100">

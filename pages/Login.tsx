@@ -31,7 +31,7 @@ const Login: React.FC = () => {
 
             <div className="relative bg-white rounded-[2.5rem] shadow-2xl p-10 max-w-md w-full text-center">
                 {/* Logo */}
-                <div className="flex items-center justify-center mb-8">
+                <div className="flex items-center justify-center mb-8 relative z-10">
                     <Logo variant="large" />
                 </div>
 

@@ -277,6 +277,23 @@ export const TESTIMONIALS: Testimonial[] = [
   { id: '9', name: 'Yusuf Abubakar', location: 'Kano', text: 'They shipped my gaming laptop all the way to Kano safely. The Dell G3 runs GTA and FIFA perfectly. Worth every naira!', rating: 5 },
 ];
 
+export interface HappyTechie {
+  name: string;
+  city: string;
+  quote: string;
+  laptop: string;
+  emoji: string;
+}
+
+export const HAPPY_TECHIES: HappyTechie[] = [
+  { name: 'Segun A.', city: 'Lagos', quote: 'Received my HP EliteBook in perfect condition. Battery lasts all day at the office!', laptop: 'HP EliteBook 840 G5', emoji: '💼' },
+  { name: 'Amina B.', city: 'Abuja', quote: 'Ordered for my daughter heading to UNILAG. She loves it for coding and assignments.', laptop: 'Dell Latitude 5480', emoji: '🎓' },
+  { name: 'Chidi O.', city: 'Port Harcourt', quote: 'Third purchase from Yustech. This ThinkPad handles Docker and VS Code like a champ.', laptop: 'ThinkPad T480', emoji: '💻' },
+  { name: 'Funmi D.', city: 'Ibadan', quote: 'The gaming laptop arrived safely with bubble wrap. FIFA runs at 144fps!', laptop: 'Dell G3 15 Gaming', emoji: '🎮' },
+  { name: 'Ibrahim K.', city: 'Kano', quote: 'Was skeptical about ordering online from Lagos. The delivery was faster than expected.', laptop: 'Acer Aspire 3', emoji: '🚀' },
+  { name: 'Ngozi E.', city: 'Enugu', quote: 'Beautiful MacBook Pro. My design clients are impressed with the screen quality.', laptop: 'MacBook Pro 16', emoji: '🎨' },
+];
+
 export const formatPrice = (price: number) => {
   return `₦${price.toLocaleString()}`;
 };
