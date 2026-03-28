@@ -104,7 +104,7 @@ const Home: React.FC = () => {
     { title: "Budget Friendly", cat: Category.BUDGET },
   ];
 
-  const hotToday = inventory.slice(0, 3);
+  const hotToday = inventory.slice(0, 5);
 
   return (
     <div className="bg-[#f1f1f2] md:pb-20 overflow-x-hidden">
