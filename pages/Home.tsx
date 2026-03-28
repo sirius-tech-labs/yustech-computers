@@ -147,7 +147,7 @@ const Home: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link to="/shop" className="bg-[#2D2852] text-white px-8 py-4 rounded font-bold text-base transition-all hover:bg-brand-primary flex items-center justify-center gap-3">
-                  Get Start Now <ChevronRight size={18} />
+                  PRICE FILTER <ChevronRight size={18} />
                 </Link>
                 <Link to="/finder" className="bg-white border-2 border-gray-200 text-gray-800 px-8 py-4 rounded font-bold text-base transition-all hover:border-gray-900 flex items-center justify-center">
                   AI HELPER
